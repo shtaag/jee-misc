@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>vulne.plain</display-name>
+  <servlet>
+    <servlet-name>top</servlet-name>
+    <servlet-class>
+  		base.web.TopServlet
+  	</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>top</servlet-name>
+    <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>VulnerableServlet</display-name>
+    <servlet-name>VulnerableServlet</servlet-name>
+    <servlet-class>base.web.VulnerableServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>VulnerableServlet</servlet-name>
+    <url-pattern>/output</url-pattern>
+  </servlet-mapping>
+</web-app>

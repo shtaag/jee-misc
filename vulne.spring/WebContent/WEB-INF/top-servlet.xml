@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans 
+  http://www.springframework.org/schema/beans/spring-beans-3.1.1.xsd ">
+
+  <!-- ビュー名からJSPファイルを紐付けるクラス -->
+  <bean id="viewResolver"
+    class=
+  "org.springframework.web.servlet.view.InternalResourceViewResolver">
+    <property name="prefix" value="/WEB-INF/jsp/"/>
+    <property name="suffix" value=".jsp"/>
+  </bean>
+
+  <!-- やまびこ業務ロジック -->
+  <bean id="echoBusinessLogic" class="base.logic.EchoBusinessLogic">
+    <property name="echoCount" value="5"/>
+  </bean>
+  
+  <!-- コントローラ -->
+  <bean name="/spring.form"
+    class="base.web.AnonymController">
+    <property name="formView" value="input" />
+    <property name="successView" value="output" />
+    <property name="commandClass" value="base.model.AnonymCommand"/>
+    <property name="commandName" value="anonym"/>
+    <property name="businessLogic" ref="echoBusinessLogic"/>
+  </bean>
+</beans>
