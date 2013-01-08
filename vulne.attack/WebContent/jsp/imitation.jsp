@@ -10,9 +10,11 @@
 <script>alert("alert test")</script>
 <!-- 
 <iframe src="http://localhost:8080/vulne.plain/output?name=<script>window.location='http://localhost:8080/vulne.plain/output?name=attacked'</script>" height="500" width="500"></iframe>
-<iframe src="http://localhost:8080/vulne.plain/output?name=<script>window.location='http://localhost:8080/vulne.plain/output?name=attacked'</script>" height="500" width="500"></iframe>
--->
 <iframe src="http://localhost:8080/vulne.plain/output?name=<script>alert(%22xyz%22)</script>" height="500" width="500"></iframe>
+-->
+<iframe src="http://localhost:8080/vulne.plain/output?name=<script>window.location='http://localhost:8080/vulne.plain/output?name=attacked'</script>" height="500" width="500"></iframe>
 
+<script>$("iframe").contents()</script>
 </body>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
 </html>

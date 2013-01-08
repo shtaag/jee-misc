@@ -22,4 +22,14 @@
     <servlet-name>VulnerableServlet</servlet-name>
     <url-pattern>/output</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>JQueryServlet</display-name>
+    <servlet-name>JQueryServlet</servlet-name>
+    <servlet-class>base.web.JQueryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>JQueryServlet</servlet-name>
+    <url-pattern>/jquery</url-pattern>
+  </servlet-mapping>
 </web-app>
