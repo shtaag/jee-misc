@@ -13,7 +13,14 @@
 <iframe src="http://localhost:8080/vulne.plain/hello" height="500" width="500"></iframe>
 
 <script>
-	$("iframe").$(".container").html("override");
+	$(window).load( function() {
+		alert("start!!");
+		var a = $("iframe").contents().find("#label01").text("overridden");
+		alert(a);
+		$("#disp").text("in effect");
+	});
 </script>
+
+<h1 id="disp">assertion</h1>
 </body>
 </html>

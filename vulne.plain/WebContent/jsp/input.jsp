@@ -39,7 +39,7 @@
 		<form action="output" method="get" class="form-horizontal">
 		<fieldset>
 		<div class="control-group">
-			<label class="control-label" for="input01">Input: </label>
+			<label class="control-label" for="input01" id="label01">Input: </label>
 			<div class="controls">
 			<input type=text class="input-xlarge" id="input01" name="name"/>
 			</div>
